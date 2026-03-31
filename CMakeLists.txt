@@ -1,0 +1,1 @@
+cmake_minimum_required(VERSION 3.15)\n\nproject(async_http_server VERSION 1.0)\n\nset(CMAKE_CXX_STANDARD 23)\nset(CMAKE_CXX_STANDARD_REQUIRED True)\n\nfind_package(Boost REQUIRED)\n\nadd_executable(async_http_server main.cpp)\n\ntarget_link_libraries(async_http_server Boost::Boost pthread)\n
